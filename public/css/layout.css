@@ -1,0 +1,134 @@
+/* /public/css/navbar-footer.css */
+
+/* ------------------------ */
+/* NAVBAR STYLES */
+/* ------------------------ */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+.navbar.scrolled {
+  background: rgba(42,42,42,0.85);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.3);
+  padding: .75rem 2rem;
+}
+
+.navbar .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+.navbar .logo img {
+  height: 2.8rem;
+  transition: transform .3s ease;
+}
+.navbar .logo img:hover {
+  transform: scale(1.05);
+}
+
+.navbar a {
+  padding: .5rem 1rem;
+  transition: color .3s ease;
+}
+.navbar a::after {
+  bottom: -4px;
+  height: 3px;
+  background: #fdbb2d;
+}
+.navbar a:hover::after {
+  width: 100%;
+}
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 2rem;
+}
+
+/* ------------------------ */
+/* FOOTER STYLES */
+/* ------------------------ */
+.footer,
+.footer-container {
+  background-color: #2b2b2a;
+}
+
+.footer {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-container {
+  padding: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-col {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer-col p,
+.footer-col a {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: #fdbb2d;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.footer-icons img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #fdbb2d;
+}
+
+.footer-bottom {
+  background-color: #2b2b2a;
+  margin-top: 2rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #999;
+}
