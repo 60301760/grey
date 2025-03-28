@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grey Coffee</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section class="hero">
+    <header>
+      <nav class="navbar">
+        <ul class="nav-left">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">General</a></li>
+          <li><a href="#">Shop</a></li>
+        </ul>
+
+        <div class="logo">
+          <img src="images/logo.png" alt="Grey Coffee Logo" style="height: 40px;" />
+        </div>
+
+        <ul class="nav-right">
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">FW Academy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="blob-container">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+      </div>
+
+    <div class="hero-content">
+      <h1>EST. 2020</h1>
+      <a href="#" class="hero-button">View Our Menu</a>
+    </div>
+  </section>
+
+  <section class="split-panel">
+    <div class="panel-image">
+      <img src="images/treat1.jpg" alt="Barista pouring latte art">
+    </div>
+    <div class="panel-text">
+      <h2>Barista Art</h2>
+      <p>Discover the craftsmanship of latte perfection</p>
+    </div>
+  </section>
+
+  <section class="split-panel reverse">
+    <div class="panel-image">
+      <img src="images/treat2.jpg" alt="Coffee products on shelf">
+    </div>
+    <div class="panel-text">
+      <h2>Our Products</h2>
+      <p>Shelves filled with curated Grey Coffee goods</p>
+    </div>
+  </section>
+
+  <section class="split-panel">
+    <div class="panel-image">
+      <img src="images/treat3.jpg" alt="Bags of roasted beans">
+    </div>
+    <div class="panel-text">
+      <h2>Freshly Roasted</h2>
+      <p>Premium beans, roasted daily for ultimate flavor</p>
+    </div>
+  </section>
+
+  <section class="coffee-scroll">
+    <h2>Explore the Grey Coffee Beans</h2>
+    <p>Available in-store & online</p>
+  
+    <div class="product-carousel">
+      <div class="product-card zoom">
+        <img src="images/bean3.jpg" alt="Flores Manggarai" />
+        <h3>Flores Manggarai</h3>
+        <p>Berries • Orange • Strawberry</p>
+      </div>
+      <div class="product-card zoom">
+        <img src="images/bean1.jpg" alt="Jinotega" />
+        <h3>Jinotega</h3>
+        <p>Cherry • Mango • Honey • Parline</p>
+      </div>
+      <div class="product-card zoom">
+        <img src="images/bean5.jpg" alt="Hamasho Village" />
+        <h3>Hamasho Village</h3>
+        <p>Jasmine • Apricot • Lychee</p>
+      </div>
+      <div class="product-card zoom">
+        <img src="images/bean2.jpg" alt="Decaffeinated" />
+        <h3>Decaffeinated</h3>
+        <p>Apple • Cranberry • Chocolate</p>
+      </div>
+      <div class="product-card zoom">
+        <img src="images/bean6.jpg" alt="Pink Bourbon Paraiso" />
+        <h3>Pink Bourbon Paraiso</h3>
+        <p>Hibiscus • Vanilla • Peach • Cherry</p>
+      </div>
+      <div class="product-card zoom">
+        <img src="images/bean4.jpg" alt="Finca La Valentina" />
+        <h3>Finca La Valentina</h3>
+        <p>Berry • Molasses • Sweet</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="reviews-section">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews-scroll">
+      <div class="reviews-container">
+        <a class="review-card" href="https://www.google.com/maps/place/Grey+Specialty+Coffee" target="_blank" rel="noopener">
+          <p class="review-text">“The best coffee shop in Doha. Interior is aesthetically pleasing and the coffee is great.”</p>
+          <p class="review-author">— Ahmad R.</p>
+          <p class="review-stars">★★★★★</p>
+        </a>
+        <a class="review-card" href="https://www.google.com/maps/place/Grey+Specialty+Coffee" target="_blank" rel="noopener">
+          <p class="review-text">“Grey coffee is calm, clean, minimal. Loved the vibes, staff, and their iced latte.”</p>
+          <p class="review-author">— Sara M.</p>
+          <p class="review-stars">★★★★★</p>
+        </a>
+        <a class="review-card" href="https://www.google.com/maps/place/Grey+Specialty+Coffee" target="_blank" rel="noopener">
+          <p class="review-text">“Great service and very tasty coffee beans. Would definitely visit again.”</p>
+          <p class="review-author">— Khalid B.</p>
+          <p class="review-stars">★★★★☆</p>
+        </a>
+        <a class="review-card" href="https://www.google.com/maps/place/Grey+Specialty+Coffee" target="_blank" rel="noopener">
+          <p class="review-text">“Beautiful place, amazing ambiance, and the staff are always welcoming.”</p>
+          <p class="review-author">— Layla A.</p>
+          <p class="review-stars">★★★★★</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      reveals.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+          el.classList.add('active');
+        } else {
+          el.classList.remove('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+  <script>
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+    </script>
+    <script>
+  const panels = document.querySelectorAll('.split-panel');
+
+  function animatePanels() {
+    const triggerPoint = window.innerHeight * 0.85;
+
+    panels.forEach(panel => {
+      const top = panel.getBoundingClientRect().top;
+      if (top < triggerPoint) {
+        panel.classList.add('visible');
+      } else {
+        panel.classList.remove('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animatePanels);
+  window.addEventListener('load', animatePanels);
+</script>
+</body>
+</html>

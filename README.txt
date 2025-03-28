@@ -1,0 +1,1 @@
+Place a 'hero.jpg' image in the same folder to complete the hero section.
