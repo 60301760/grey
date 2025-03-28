@@ -3,69 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menu | Grey Coffee</title>
-  <!-- Reuse the main stylesheet for navbar/footer styling -->
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Include the new menu-specific stylesheet -->
-  <link rel="stylesheet" href="menu.css" />
+  <title>Grey Coffee – Menu</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/navbar-footer.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/menu.css" />
 </head>
 <body>
-  <!-- This div is your blurred background layer -->
+  <!-- Blurred Background Layer -->
   <div class="background-blur"></div>
-
-  <!-- Header / Navbar (reuse from your index) -->
+  <!-- Header / Navbar -->
   <header>
     <nav class="navbar">
       <ul class="nav-left">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">General</a></li>
-        <li><a href="#">Shop</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/views/about.html">About</a></li>
       </ul>
       <div class="logo">
-        <img src="images/logo.png" alt="Grey Coffee Logo" style="height: 40px;" />
+        <img src="/images/logo.png" alt="Grey Coffee Logo" style="height: 40px;" />
       </div>
       <ul class="nav-right">
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="#">FW Academy</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/views/menu.html">Menu</a></li>
+        <li><a href="mailto:hello@greycoffee.com">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main content -->
+  <!-- Menu Content -->
   <main class="menu-content">
     <h1>House Drinks</h1>
     <p>Enjoy our curated selection of coffee and beverages.</p>
-
-    <!-- Example grid of menu items -->
     <div class="menu-grid">
-      <!-- Repeat this .menu-item block for each drink -->
       <div class="menu-item">
-        <img src="images/drink1.jpg" alt="Caffè Latte">
+        <img src="/images/coffee1.png" alt="Caffè Latte" />
         <h3>Caffè Latte</h3>
         <p>A classic made with espresso and your choice of milk.</p>
         <p class="price">33 QAR</p>
       </div>
-
       <div class="menu-item">
-        <img src="images/drink2.jpg" alt="Cappuccino">
+        <img src="/images/coffee2.png" alt="Cappuccino" />
         <h3>Cappuccino</h3>
         <p>A double shot of espresso with perfectly frothed milk.</p>
         <p class="price">33 QAR</p>
       </div>
-
       <div class="menu-item">
-        <img src="images/drink3.jpg" alt="Flat White">
+        <img src="/images/coffee3.png" alt="Flat White" />
         <h3>Flat White</h3>
         <p>Our house espresso with steamed milk for a smooth taste.</p>
         <p class="price">33 QAR</p>
       </div>
-      <!-- ... Add more items as needed ... -->
+      <div class="menu-item">
+        <img src="/images/coffee4.png" alt="Americano" />
+        <h3>Americano</h3>
+        <p>Espresso diluted with hot water for a rich, smooth coffee.</p>
+        <p class="price">25 QAR</p>
+      </div>
+      <div class="menu-item">
+        <img src="/images/coffee5.png" alt="Mocha" />
+        <h3>Mocha</h3>
+        <p>Espresso with chocolate, steamed milk, and whipped cream.</p>
+        <p class="price">35 QAR</p>
+      </div>
     </div>
   </main>
 
-  <!-- Footer (reuse from your index) -->
-  <footer class="site-footer">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="footer-container">
       <div class="footer-col">
         <h4>Grey Coffee</h4>
@@ -80,9 +84,9 @@
       <div class="footer-col">
         <h4>Connect</h4>
         <div class="footer-icons">
-          <a href="#"><img src="images/fb.svg" alt="Facebook" /></a>
-          <a href="#"><img src="images/ig.svg" alt="Instagram" /></a>
-          <a href="#"><img src="images/x.svg" alt="Twitter" /></a>
+          <a href="#"><img src="/images/fb.svg" alt="Facebook" /></a>
+          <a href="#"><img src="/images/ig.svg" alt="Instagram" /></a>
+          <a href="#"><img src="/images/x.svg" alt="Twitter" /></a>
         </div>
       </div>
     </div>
