@@ -34,6 +34,14 @@
   </style>
 </head>
 <body class="relative bg-zinc-900 text-gray-200">
+  <!-- Loading Screen -->
+<div id="loading-screen" class="fixed inset-0 bg-zinc-900 flex items-center justify-center z-[9999] transition-opacity duration-300">
+  <div class="flex flex-col items-center gap-4">
+    <!-- Spinner -->
+    <div class="w-10 h-10 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
+    <p class="text-yellow-400 text-sm tracking-wide">Loading...</p>
+  </div>
+</div>
 
   <!-- Fixed Navbar (Identical to index.html, with 'Products' link highlighted) -->
   <header class="w-full bg-zinc-900 border-b border-zinc-800 relative z-50">
@@ -452,5 +460,27 @@
       &copy; 2025 Grey Coffee. All rights reserved.
     </div>
   </footer>
+  <script>
+    // Show loading screen when link is clicked
+    document.querySelectorAll('a[href]').forEach(link => {
+      link.addEventListener('click', e => {
+        const href = link.getAttribute('href');
+        const isExternal = href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:');
+        if (!isExternal) {
+          document.getElementById('loading-screen').classList.remove('hidden');
+          document.getElementById('loading-screen').classList.add('flex');
+        }
+      });
+    });
+  
+    // Hide loading screen after page load
+    window.addEventListener('load', () => {
+      const screen = document.getElementById('loading-screen');
+      if (screen) {
+        screen.classList.add('opacity-0');
+        setTimeout(() => screen.classList.add('hidden'), 300);
+      }
+    });
+  </script>
 </body>
 </html>
