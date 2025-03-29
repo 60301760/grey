@@ -1,98 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grey Coffee – Menu</title>
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="/css/base.css" />
-  <link rel="stylesheet" href="/css/navbar-footer.css" />
-  <link rel="stylesheet" href="/css/components.css" />
-  <link rel="stylesheet" href="/css/menu.css" />
-</head>
-<body>
-  <!-- Blurred Background Layer -->
-  <div class="background-blur"></div>
-  <!-- Header / Navbar -->
-  <header>
-    <nav class="navbar">
-      <ul class="nav-left">
-        <li><a href="/">Home</a></li>
-        <li><a href="/views/about.html">About</a></li>
+<html lang="en" class="bg-[#1f1f1f] text-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grey Coffee Menu</title>
+    <link href="/css/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-sans bg-[#1f1f1f] text-white">
+
+    <!-- Navbar -->
+    <nav class="w-full px-6 py-4 bg-[#2b2b2a] shadow-lg flex justify-between items-center fixed top-0 z-50">
+      <ul class="flex space-x-6">
+        <li><a href="/" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="/views/about.html" class="hover:text-yellow-400">About</a></li>
       </ul>
-      <div class="logo">
-        <img src="/images/logo.png" alt="Grey Coffee Logo" style="height: 40px;" />
-      </div>
-      <ul class="nav-right">
-        <li><a href="/views/menu.html">Menu</a></li>
-        <li><a href="mailto:hello@greycoffee.com">Contact</a></li>
+      <div class="text-xl font-semibold text-gray-200 tracking-widest">GREY</div>
+      <ul class="flex space-x-6">
+        <li><a href="/views/menu.html" class="hover:text-yellow-400">Menu</a></li>
+        <li><a href="mailto:hello@greycoffee.com" class="hover:text-yellow-400">Contact</a></li>
       </ul>
     </nav>
-  </header>
 
-  <!-- Menu Content -->
-  <main class="menu-content">
-    <h1>House Drinks</h1>
-    <p>Enjoy our curated selection of coffee and beverages.</p>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <img src="/images/coffee1.png" alt="Caffè Latte" />
-        <h3>Caffè Latte</h3>
-        <p>A classic made with espresso and your choice of milk.</p>
-        <p class="price">33 QAR</p>
-      </div>
-      <div class="menu-item">
-        <img src="/images/coffee2.png" alt="Cappuccino" />
-        <h3>Cappuccino</h3>
-        <p>A double shot of espresso with perfectly frothed milk.</p>
-        <p class="price">33 QAR</p>
-      </div>
-      <div class="menu-item">
-        <img src="/images/coffee3.png" alt="Flat White" />
-        <h3>Flat White</h3>
-        <p>Our house espresso with steamed milk for a smooth taste.</p>
-        <p class="price">33 QAR</p>
-      </div>
-      <div class="menu-item">
-        <img src="/images/coffee4.png" alt="Americano" />
-        <h3>Americano</h3>
-        <p>Espresso diluted with hot water for a rich, smooth coffee.</p>
-        <p class="price">25 QAR</p>
-      </div>
-      <div class="menu-item">
-        <img src="/images/coffee5.png" alt="Mocha" />
-        <h3>Mocha</h3>
-        <p>Espresso with chocolate, steamed milk, and whipped cream.</p>
-        <p class="price">35 QAR</p>
-      </div>
-    </div>
-  </main>
+    <main class="pt-28 px-4 max-w-6xl mx-auto">
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-col">
-        <h4>Grey Coffee</h4>
-        <p>Specialty roastery focused on calm experiences and quality beans.</p>
+      <!-- Page Title -->
+      <section class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-yellow-400 mb-2">Our Menu</h1>
+        <p class="text-gray-400">Explore our full selection of drinks & offerings</p>
+      </section>
+
+      <!-- Category Filters -->
+      <div class="flex flex-wrap gap-3 justify-center mb-8">
+        <button class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-yellow-400 hover:text-black">Drinks</button>
+        <button class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-yellow-400 hover:text-black">Bakery</button>
+        <button class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-yellow-400 hover:text-black">Brunch</button>
+        <button class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-yellow-400 hover:text-black">Pastry</button>
       </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p><strong>Address:</strong> West Bay, Doha, Qatar</p>
-        <p><strong>Email:</strong> <a href="mailto:hello@greycoffee.com">hello@greycoffee.com</a></p>
-        <p><strong>Phone:</strong> +974 1234 5678</p>
-      </div>
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <div class="footer-icons">
-          <a href="#"><img src="/images/fb.svg" alt="Facebook" /></a>
-          <a href="#"><img src="/images/ig.svg" alt="Instagram" /></a>
-          <a href="#"><img src="/images/x.svg" alt="Twitter" /></a>
+
+      <!-- Menu Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card -->
+        <div class="bg-[#2e2e2e] rounded-xl p-4 shadow-md hover:shadow-xl transition">
+          <img src="/images/coffee1.png" alt="Espresso" class="rounded-lg w-full mb-4" />
+          <h3 class="text-lg font-semibold text-yellow-400">Espresso</h3>
+          <p class="text-gray-300">Strong single-shot coffee</p>
+          <p class="mt-2 text-white font-bold">QAR 21.00</p>
+        </div>
+
+        <div class="bg-[#2e2e2e] rounded-xl p-4 shadow-md hover:shadow-xl transition">
+          <img src="/images/coffee2.png" alt="Americano" class="rounded-lg w-full mb-4" />
+          <h3 class="text-lg font-semibold text-yellow-400">Americano</h3>
+          <p class="text-gray-300">Espresso with hot water</p>
+          <p class="mt-2 text-white font-bold">QAR 21.00</p>
+        </div>
+
+        <div class="bg-[#2e2e2e] rounded-xl p-4 shadow-md hover:shadow-xl transition">
+          <img src="/images/coffee3.png" alt="Flat White" class="rounded-lg w-full mb-4" />
+          <h3 class="text-lg font-semibold text-yellow-400">Flat White</h3>
+          <p class="text-gray-300">Double shot espresso with milk</p>
+          <p class="mt-2 text-white font-bold">QAR 24.00</p>
+        </div>
+
+        <div class="bg-[#2e2e2e] rounded-xl p-4 shadow-md hover:shadow-xl transition">
+          <img src="/images/coffee4.png" alt="Latte" class="rounded-lg w-full mb-4" />
+          <h3 class="text-lg font-semibold text-yellow-400">Latte</h3>
+          <p class="text-gray-300">Single shot with milk and less foam</p>
+          <p class="mt-2 text-white font-bold">QAR 26.00</p>
+        </div>
+
+        <div class="bg-[#2e2e2e] rounded-xl p-4 shadow-md hover:shadow-xl transition">
+          <img src="/images/coffee5.png" alt="Pink Bourbon" class="rounded-lg w-full mb-4" />
+          <h3 class="text-lg font-semibold text-yellow-400">Pink Bourbon</h3>
+          <p class="text-gray-300">Hibiscus • Vanilla • Cherry</p>
+          <p class="mt-2 text-white font-bold">QAR 26.00</p>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025, Grey Coffee. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 py-10 px-6 bg-[#2b2b2a] text-center text-gray-400 text-sm">
+      <p>&copy; 2025 Grey Coffee. All rights reserved.</p>
+    </footer>
+
+  </body>
 </html>

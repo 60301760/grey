@@ -4,165 +4,272 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grey Coffee</title>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/navbar-footer.css" />
-    <link rel="stylesheet" href="/css/hero.css" />
-    <link rel="stylesheet" href="/css/layout.css" />
-    <link rel="stylesheet" href="/css/components.css" />
-  </head>
-  <body>
-    <!-- Hero Section -->
-    <section class="hero">
-      <header>
-        <nav class="navbar">
-          <ul class="nav-left">
-            <li><a href="/">Home</a></li>
-            <li><a href="/views/about.html">About</a></li>
-          </ul>
-          <div class="logo">
-            <img src="/images/logo.png" alt="Grey Coffee Logo" style="height: 40px;" />
-          </div>
-          <ul class="nav-right">
-            <li><a href="/views/menu.html">Menu</a></li>
-            <li><a href="mailto:hello@greycoffee.com">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div class="hero-content">
-        <h1>EST. 2020</h1>
-        <a href="/views/menu.html" class="hero-button">View Our Menu</a>
-      </div>
-    </section>
-  
-    <!-- Split Panels -->
-    <section class="split-panel">
-      <div class="panel-image">
-        <img src="/images/treat1.jpg" alt="Barista pouring latte art" />
-      </div>
-      <div class="panel-text">
-        <h2>Barista Art</h2>
-        <p>Discover the craftsmanship of latte perfection</p>
-      </div>
-    </section>
-    <section class="split-panel reverse">
-      <div class="panel-image">
-        <img src="/images/treat2.jpg" alt="Coffee products on shelf" />
-      </div>
-      <div class="panel-text">
-        <h2>Our Products</h2>
-        <p>Shelves filled with curated Grey Coffee goods</p>
-      </div>
-    </section>
-    <section class="split-panel">
-      <div class="panel-image">
-        <img src="/images/treat3.jpg" alt="Bags of roasted beans" />
-      </div>
-      <div class="panel-text">
-        <h2>Freshly Roasted</h2>
-        <p>Premium beans, roasted daily for ultimate flavor</p>
-      </div>
-    </section>
-  
-    <!-- Coffee Product Carousel -->
-    <section class="coffee-scroll">
-      <h2>Explore the Grey Coffee Beans</h2>
-      <p>Available in-store &amp; online</p>
-      <div class="product-carousel">
-        <div class="product-card">
-          <img src="/images/coffee1.png" alt="Flores Manggarai" />
-          <h3>Flores Manggarai</h3>
-          <p>Berries • Orange • Strawberry</p>
-        </div>
-        <div class="product-card">
-          <img src="/images/coffee2.png" alt="Jinotega" />
-          <h3>Jinotega</h3>
-          <p>Cherry • Mango • Honey • Praline</p>
-        </div>
-        <div class="product-card">
-          <img src="/images/coffee3.png" alt="Hamasho Village" />
-          <h3>Hamasho Village</h3>
-          <p>Jasmine • Apricot • Lychee</p>
-        </div>
-        <div class="product-card">
-          <img src="/images/coffee4.png" alt="Decaffeinated" />
-          <h3>Decaffeinated</h3>
-          <p>Apple • Cranberry • Chocolate</p>
-        </div>
-        <div class="product-card">
-          <img src="/images/coffee5.png" alt="Pink Bourbon Paraiso" />
-          <h3>Pink Bourbon Paraiso</h3>
-          <p>Hibiscus • Vanilla • Peach • Cherry</p>
-        </div>
-      </div>
-    </section>
-  
-    <!-- Customer Reviews -->
-    <section class="reviews-section">
-      <h2>What Our Customers Say</h2>
-      <div class="reviews-container">
-        <a class="review-card" href="https://www.google.com/maps/place/Grey+Specialty+Coffee" target="_blank">
-          <p class="review-text">“The best coffee shop in Doha. Interior is aesthetically pleasing and the coffee is great.”</p>
-          <p class="review-author">— Ahmad R.</p>
-          <p class="review-stars">★★★★★</p>
-        </a>
-        <a class="review-card" href="https://www.google.com/maps/place/Grey+Specialty+Coffee" target="_blank">
-          <p class="review-text">“Grey coffee is calm, clean, minimal. Loved the vibes, staff, and their iced latte.”</p>
-          <p class="review-author">— Sara M.</p>
-          <p class="review-stars">★★★★★</p>
-        </a>
-        <a class="review-card" href="https://www.google.com/maps/place/Grey+Specialty+Coffee" target="_blank">
-          <p class="review-text">“Great service and very tasty coffee beans. Would definitely visit again.”</p>
-          <p class="review-author">— Khalid B.</p>
-          <p class="review-stars">★★★★☆</p>
-        </a>
-        <a class="review-card" href="https://www.google.com/maps/place/Grey+Specialty+Coffee" target="_blank">
-          <p class="review-text">“Beautiful place, amazing ambiance, and the staff are always welcoming.”</p>
-          <p class="review-author">— Layla A.</p>
-          <p class="review-stars">★★★★★</p>
-        </a>
-      </div>
-    </section>
-  
-    <!-- Scripts for scroll animations -->
-    <script>
-      const panels = document.querySelectorAll('.split-panel');
-      function animatePanels() {
-        const triggerPoint = window.innerHeight * 0.85;
-        panels.forEach(panel => {
-          const top = panel.getBoundingClientRect().top;
-          panel.classList.toggle('visible', top < triggerPoint);
-        });
+    <link href="../css/output.css" rel="stylesheet" />
+    <!-- Google Font: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Montserrat', sans-serif;
       }
-      window.addEventListener('scroll', animatePanels);
-      window.addEventListener('load', animatePanels);
-    </script>
-  
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-col">
-          <h4>Grey Coffee</h4>
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-zinc-950 to-zinc-900 text-white">
+  <body class="bg-zinc-900 text-white font-sans">
+<!-- FIXED NAVIGATION BAR -->
+<header class="w-full bg-zinc-900 border-b border-zinc-800 relative z-50">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 relative text-white">
+    <!-- Left Nav Items -->
+    <div class="flex items-center gap-6 text-sm font-light">
+      <a href="/" class="hover:underline">Home</a>
+      <a href="/views/about.html" class="hover:underline">Catalog</a>
+      <a href="/views/menu.html" class="hover:underline">Products</a>
+    </div>
+
+    <!-- Center Logo (ABSOLUTELY CENTERED) -->
+    <div class="absolute left-1/2 transform -translate-x-1/2">
+      <img src="../images/logo.png" alt="Grey Coffee Logo" class="h-10" />
+    </div>
+
+    <!-- Right Icons -->
+    <div class="flex items-center gap-6">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.75 3.75a7.5 7.5 0 0012.9 12.9z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9.004 9.004 0 0112 15c2.485 0 4.735.994 6.379 2.621M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    </div>
+  </nav>
+</header>
+
+<!-- FIXED BACKGROUND SECTION -->
+<!-- SMOOTH TRANSITION BACKGROUND SECTION -->
+<section class="relative h-[600px] bg-[url('../images/background.jpeg')] bg-cover bg-center flex items-center justify-center px-4">
+  <!-- Dark overlay for text readability -->
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <!-- Bottom gradient for smooth transition -->
+  <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-zinc-900 z-20"></div>
+
+  <!-- Centered hero content -->
+  <div class="relative z-30 max-w-2xl text-center text-white">
+    <h1 class="text-3xl sm:text-5xl font-light mb-4">Grey Speciality Coffee</h1>
+    <p class="text-sm sm:text-base font-light">
+      EST 2020
+    </p>
+  </div>
+</section>
+
+<section class="max-w-4xl mx-auto py-24 px-6 text-center space-y-6">
+  <h2 class="text-3xl font-semibold">Rooted in Ritual</h2>
+  <p class="text-gray-300 text-lg">
+    Welcome to a space where time slows down and the coffee takes center stage. At Grey, we believe in the quiet strength of daily rituals—brewing, pouring, savoring. Our journey started with a simple idea: to create a haven for thoughtful coffee and calm connection. Here, every detail is intentional—from the warmth of the lighting to the grain of the countertop. This is more than a café. It’s a mood.
+  </p>
+</section>
+
+<section class="max-w-6xl mx-auto py-24 px-6 space-y-24 relative">
+  <div class="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-px bg-zinc-700/40"></div>
+
+  <!-- Barista Art Block -->
+  <div class="flex flex-col md:flex-row items-center gap-12 relative z-10">
+    <img src="../images/treat1.jpg" alt="Barista Art" class="rounded-lg w-full md:w-1/2 shadow-lg" />
+    <div class="text-center md:text-left space-y-2">
+      <h2 class="text-sm uppercase tracking-widest text-yellow-500">Craftsmanship</h2>
+      <h3 class="text-2xl font-semibold text-white">Where Foam Meets Form</h3>
+      <p class="text-gray-400">A quiet ritual of skill, poured with purpose and precision.</p>
+    </div>
+  </div>
+
+  <!-- Divider Icon -->
+  <div class="flex justify-center relative z-10">
+    <div class="bg-zinc-800 px-4 py-2 rounded-full shadow-md border border-zinc-700">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v8m0 0l-4-4m4 4l4-4" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Our Products Block -->
+  <div class="flex flex-col md:flex-row-reverse items-center gap-12 relative z-10">
+    <img src="../images/treat2.jpg" alt="Products" class="rounded-lg w-full md:w-1/2 shadow-lg" />
+    <div class="text-center md:text-left space-y-2">
+      <h2 class="text-sm uppercase tracking-widest text-yellow-500">Selection</h2>
+      <h3 class="text-2xl font-semibold text-white">Curated for the Curious</h3>
+      <p class="text-gray-400">Handpicked essentials for those who savor every sip.</p>
+    </div>
+  </div>
+
+  <!-- Divider Icon -->
+  <div class="flex justify-center relative z-10">
+    <div class="bg-zinc-800 px-4 py-2 rounded-full shadow-md border border-zinc-700">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 16V8m0 0l-4 4m4-4l4 4" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Freshly Roasted Block -->
+  <div class="flex flex-col md:flex-row items-center gap-12 relative z-10">
+    <img src="../images/treat3.jpg" alt="Beans" class="rounded-lg w-full md:w-1/2 shadow-lg" />
+    <div class="text-center md:text-left space-y-2">
+      <h2 class="text-sm uppercase tracking-widest text-yellow-500">Freshness</h2>
+      <h3 class="text-2xl font-semibold text-white">Roasted at Dawn, Poured at Dusk</h3>
+      <p class="text-gray-400">Every bean, a story. Every roast, a ritual.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Coffee-Focused Section -->
+<section class="max-w-4xl mx-auto py-24 px-6 text-center space-y-6">
+  <h2 class="text-3xl font-semibold">The Art of Every Bean</h2>
+  <p class="text-gray-300 text-lg">
+    From origin to cup, every bean tells a story. We partner with farms across the globe to bring rare, traceable coffees to your table—roasted in-house with care and served with precision. Whether it's the berry-rich profile of a Hamasho pour-over or the nutty complexity of a São Paulo espresso, each sip is layered and deliberate. Our baristas are artists, and your cup is their canvas.
+  </p>
+</section>
+
+<!-- 🌿 Transitional Strip (Newly Added) -->
+<section class="py-12 bg-zinc-900">
+  <div class="max-w-3xl mx-auto text-center space-y-6">
+    <!-- Decorative Divider -->
+    <div class="flex items-center justify-center gap-4 text-yellow-500 text-2xl">
+      <span>☕</span>
+      <div class="w-12 h-px bg-yellow-500"></div>
+      <span>🌍</span>
+      <div class="w-12 h-px bg-yellow-500"></div>
+      <span>🌱</span>
+    </div>
+
+    <!-- Tagline -->
+    <p class="text-gray-400 text-lg">
+      Every roast begins with a journey — from highlands to hands, from soil to sip.
+    </p>
+  </div>
+</section>
+
+<!-- Featured Roast Section -->
+<section class="bg-zinc-900 py-24 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <!-- Left: Featured Image -->
+    <div class="w-full">
+      <img src="../images/coffee3.png" alt="Featured Roast" class="rounded-xl shadow-lg object-cover w-full h-80" />
+    </div>
+
+    <!-- Right: Roast Details -->
+    <div class="space-y-6 text-center md:text-left">
+      <h2 class="text-yellow-500 text-sm uppercase tracking-widest">Featured Roast</h2>
+      <h3 class="text-3xl font-semibold text-white">Hamasho Village, Ethiopia</h3>
+      <p class="text-gray-400 text-lg">
+        Notes of <span class="text-white">jasmine, apricot,</span> and <span class="text-white">lychee</span> — a vibrant cup from the highlands of Sidama, roasted in small batches for clarity and sweetness.
+      </p>
+      <p class="text-yellow-500 font-semibold text-lg">$11.00</p>
+      <button class="bg-yellow-500 text-zinc-900 px-6 py-2 rounded-full text-sm font-semibold hover:bg-yellow-400 transition">
+        Shop Now
+      </button>
+    </div>
+  </div>
+</section>
+<!-- Ratings Summary & Featured Reviews -->
+<section class="bg-zinc-800 py-24 px-6">
+  <div class="max-w-5xl mx-auto text-center space-y-12">
+    <!-- Header -->
+    <div>
+      <h2 class="text-3xl font-semibold mb-2">Customer Ratings</h2>
+      <p class="text-gray-400">Trusted by our community — one cup at a time.</p>
+    </div>
+
+    <!-- Ratings Summary -->
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <!-- Left: Rating Score -->
+      <div class="space-y-4">
+        <div class="text-6xl font-bold text-yellow-400">4.9</div>
+        <div class="text-xl text-gray-300">Average Rating</div>
+        <div class="text-yellow-300 text-lg">★★★★★</div>
+        <p class="text-gray-400 text-sm">Based on 1,284 reviews</p>
+      </div>
+
+      <!-- Right: Star Breakdown -->
+      <div class="space-y-4 text-left">
+        <!-- Rating Row -->
+        <div class="flex items-center gap-3">
+          <span class="text-sm text-white w-12">5 ★</span>
+          <div class="w-full bg-zinc-700 rounded-full h-2">
+            <div class="bg-yellow-500 h-2 rounded-full" style="width: 85%"></div>
+          </div>
+          <span class="text-sm text-gray-400 w-10 text-right">1,090</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="text-sm text-white w-12">4 ★</span>
+          <div class="w-full bg-zinc-700 rounded-full h-2">
+            <div class="bg-yellow-500 h-2 rounded-full" style="width: 10%"></div>
+          </div>
+          <span class="text-sm text-gray-400 w-10 text-right">128</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="text-sm text-white w-12">3 ★</span>
+          <div class="w-full bg-zinc-700 rounded-full h-2">
+            <div class="bg-yellow-500 h-2 rounded-full" style="width: 3%"></div>
+          </div>
+          <span class="text-sm text-gray-400 w-10 text-right">38</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="text-sm text-white w-12">2 ★</span>
+          <div class="w-full bg-zinc-700 rounded-full h-2">
+            <div class="bg-yellow-500 h-2 rounded-full" style="width: 1%"></div>
+          </div>
+          <span class="text-sm text-gray-400 w-10 text-right">12</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="text-sm text-white w-12">1 ★</span>
+          <div class="w-full bg-zinc-700 rounded-full h-2">
+            <div class="bg-yellow-500 h-2 rounded-full" style="width: 1%"></div>
+          </div>
+          <span class="text-sm text-gray-400 w-10 text-right">6</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Quotes -->
+    <div class="grid md:grid-cols-2 gap-6 pt-12">
+      <div class="bg-zinc-900 p-6 rounded-lg shadow-md text-left space-y-2">
+        <p class="text-gray-300">“Calm, clean, and the best iced latte I’ve ever had. Will be back!”</p>
+        <div class="text-yellow-400 font-medium">— Sara M.</div>
+      </div>
+      <div class="bg-zinc-900 p-6 rounded-lg shadow-md text-left space-y-2">
+        <p class="text-gray-300">“Amazing place, great ambiance, and very knowledgeable baristas.”</p>
+        <div class="text-yellow-400 font-medium">— Khalid B.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer class="bg-black text-gray-400 text-sm">
+      <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-white font-semibold text-lg mb-2">Grey Coffee</h4>
           <p>Specialty roastery focused on calm experiences and quality beans.</p>
         </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
+        <div>
+          <h4 class="text-white font-semibold text-lg mb-2">Contact</h4>
           <p><strong>Address:</strong> West Bay, Doha, Qatar</p>
-          <p><strong>Email:</strong> <a href="mailto:hello@greycoffee.com">hello@greycoffee.com</a></p>
+          <p><strong>Email:</strong> hello@greycoffee.com</p>
           <p><strong>Phone:</strong> +974 1234 5678</p>
         </div>
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <div class="footer-icons">
-            <a href="#"><img src="/images/fb.svg" alt="Facebook" /></a>
-            <a href="#"><img src="/images/ig.svg" alt="Instagram" /></a>
-            <a href="#"><img src="/images/x.svg" alt="Twitter" /></a>
+        <div>
+          <h4 class="text-white font-semibold text-lg mb-2">Connect</h4>
+          <div class="flex gap-4 mt-2">
+            <a href="#"><img src="../images/fb.svg" alt="Facebook" class="w-6" /></a>
+            <a href="#"><img src="../images/ig.svg" alt="Instagram" class="w-6" /></a>
+            <a href="#"><img src="../images/x.svg" alt="Twitter" class="w-6" /></a>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025, Grey Coffee. All rights reserved.</p>
-      </div>
+      <div class="text-center border-t border-zinc-800 py-4 text-xs">&copy; 2025, Grey Coffee. All rights reserved.</div>
     </footer>
   </body>
-  </html>
+</html>
+
+
